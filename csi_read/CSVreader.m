@@ -1,62 +1,40 @@
 
-csi_trace = read_bf_file('csi_clear.dat');
-% %csi_trace = read_bf_file('sample_data/log.all_csi.6.7.6');
-
-% % 
-csi_entry = csi_trace {1};
-% %csi_entry1 = csi_trace {7};
-csi = get_scaled_csi (csi_entry)
-abs(csi)
-
-db(abs(csi));
-get_eff_SNRs(csi);
-%b = abs(reshape(csi, [],30).')
+% run read_bf_socket using Matlab
+% i = 1;
 % 
-% 
-% 
-% 
-% %¿©±â¼­ºÎÅÍ
- plot(db(abs(reshape(csi, [],30).')));
- legend('RX Antenna Ax1', 'RX Antenna Ax2', 'RX Antenna Bx1','RX Antenna Bx2', 'RX Antenna Cx1', 'RX Antenna Cx2', 'Location', 'SouthEast' );
- xlabel('Subcarrier index');
- ylabel('SNR [dB]');
-% % 
-db(get_eff_SNRs(csi), 'pow');
-
-
-
-% 
-% csi_entry = csi_trace{20}
-% 
-% csi = get_scaled_csi(csi_entry);
-% db(get_eff_SNRs(csi), 'pow')
-%¿©±â±îÁö
-
- %i = 1;
-% 
- %T = [];
- %V = [];
- %A1 = zeros(1,3,30) %csv¸¦ ´ãÀ» À¯»ç A ÇöÀç 3x1·Î ±¸¼º
+% T = [];
+% V = [];
+% A1 = zeros(1,3,30); %csvï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ A
 %csi_trace = read_bf_file('C:\Users\ACA\Documents\MATLAB\matlab\real_data\walking10.data');
 %csi_trace = csvread('C:\Users\ACA\PycharmProjects\UnionProject\2018_05_09_walk10_04_delay1000.csv',0,1,[0,1,10000,90]);
-%csi_trace = read_bf_file('csi_6.dat')
-%csi_trace = read_bf_file('test.dat')
+csi_trace = read_bf_file('csi.dat');
+%csi_trace = read_bf_file('sample_data/log.all_csi.6.7.6');
+csi_entry = csi_trace {1};
 
-%csi_entry = csi_trace{3}
-%csi_entry = csi_trace{1}
+csi = get_scaled_csi (csi_entry);
 
-%¹Ýº¹ÇÏ¸é¼­ ´ãÀ½
-%while(i<1000)
+plot(db(abs(squeeze(csi).')))
+legend('RX Antenna A', 'RX Antenna B', 'RX Antenna C', 'Location', 'SouthEast' );
+xlabel('Subcarrier index');
+ylabel('SNR [dB]');
+
+db(get_eff_SNRs(csi), 'pow')
+
+csi_entry = csi_trace{20}
+
+csi = get_scaled_csi(csi_entry);
+db(get_eff_SNRs(csi), 'pow')
+% while(i<1000)
 % 
-%csi_entry = csi_trace{i};
-%csi = get_scaled_csi(csi_entry);
-% ÀÌ»óÇÔ ÀÌºÎºÐ
+% %csi_entry = csi_trace{i};
+% %csi = get_scaled_csi(csi_entry);
+% 
 % A1(:,1,:) = csi_trace(i,1:30);
 % A1(:,2,:) = csi_trace(i,31:60);
 % A1(:,3,:) = csi_trace(i,61:90);
-% %%
-%csi_entry2 =  csi_trace2{i};
-%csi2 = get_scaled_csi(csi_entry2);
+% 
+% csi_entry2 =  csi_trace2{i};
+% csi2 = get_scaled_csi(csi_entry2);
 % 
 % 
 % A = A1;
@@ -101,6 +79,6 @@ db(get_eff_SNRs(csi), 'pow');
 % 
 % i = i + 1;
 % 
-%end
+% end
 
 

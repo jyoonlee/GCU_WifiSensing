@@ -113,6 +113,19 @@ void mexFunction(int nlhs, mxArray *plhs[],
 		"noise",
 		"agc",
 		"perm",
+
+    timestamp_low: 64278191
+       bfee_count: 1
+              Nrx: 3
+              Ntx: 1
+           rssi_a: 34
+           rssi_b: 39
+           rssi_c: 39
+            noise: -127
+              agc: 58
+             perm: [2 3 1]
+             rate: 257
+              csi: [1×3×30 double]
 		"rate",
 		"csi"};
 	unsigned char *inBytes;		/* A beamforming matrix */

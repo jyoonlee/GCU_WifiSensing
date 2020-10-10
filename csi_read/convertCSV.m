@@ -2,7 +2,7 @@
 it = 1; %% it : 측정파일 개수 끝까지 찾는 iterator
 flag = 0; %% collection 생성 중복 방지용 
 
-while(it <= 2) %파일개수에 따라 숫자를 달리 한다.
+while(it <= 1) %파일개수에 따라 숫자를 달리 한다.
     
 ARR = zeros(1,30);
 % ARR_1_2 = zeros(1,30);
