@@ -53,9 +53,70 @@
 
 
 ## FairMOT
-+ We use 
++ We used [FairMOT][FairMOT] model and changed the code according to us.
++ We referred to [this link][FairMOT] for FairMOT code.
+
++ installation 
+        
+        conda create -n FairMOT
+        conda activate FairMOT
+        conda install pytorch==1.7.0 torchvision==0.8.0 cudatoolkit=10.2 -c pytorch
+        cd ${FAIRMOT_ROOT}
+        pip install -r requirements.txt
++ baseline model
+  pretrain model fairmot_dla34.pth [Google][pretrain_model] Reference [this link][FairMOT]
+  Model save structure
+  
+          ${FAIRMOT_ROOT}
+           └——————models
+                   └——————fairmot_dla34.pth
+                   └——————...
+           └——————src
+                   └——————...
+           └——————video
+                   └——————video
+           └——————demo
+                   └——————result.txt
+                   └——————frame image
+                   └——————output.mp4
+                   └——————...
+
+
++ Use FairMOT Object Detection
+        
+        cd ${FAIRMOT_ROOT(Object Detection)}
+        cd src
+        python demo.py mot --load_model ../models/fairmot_dla34.pth --conf_thres 0.4
+ 
++ result.txt output
+        
+        YY-MM-DD hh:mm:ss       object label
+
++ Use FairMOT position
+        
+        cd ${FAIRMOT_ROOT(Position)}
+        cd src
+        python demo.py mot --load_model ../models/fairmot_dla34.pth --conf_thres 0.4
+
++ result.txt output
+        
+        frame_number    Object id       position x      position y
+
 
 ## Experiment
+
++ Use TrainModel.py
+        
+        python TrainModel.py
+
++ input
+1. CSI Data
+2. Object Detection Result.txt
+
++ Progress
+1. Syncronize csi label and 
+2. Use Randomforest
+
 
 
 ## Result
@@ -70,5 +131,6 @@
 
 [CSI_Tool]: https://dhalperi.github.io/linux-80211n-csitool/ "802.11n CSI Tool"
 [read_bf_socket]: https://github.com/lubingxian/Realtime-processing-for-csitool "Realtime-processing-for-csitool"
-[supplementary]: https://github.com/dhalperi/linux-80211n-csitool-supplementary "linux-80211n-csitool-supplementary
-"
+[supplementary]: https://github.com/dhalperi/linux-80211n-csitool-supplementary "linux-80211n-csitool-supplementary"
+[FairMOT]: https://github.com/ifzhang/FairMOT "FairMOT"
+[pretrain_model]: https://drive.google.com/file/d/1iqRQjsG9BawIl8SlFomMg5iwkb6nqSpi/view "pretrain_model"
