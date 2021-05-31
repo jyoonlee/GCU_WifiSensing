@@ -47,14 +47,20 @@
            
         ping -i 0.2 192.168.1.1
         
-### Demo Video
-![csi-out](https://user-images.githubusercontent.com/49142825/120187694-19be3480-c250-11eb-9ec8-481892a59295.mp4)
+
+
+
+
 
 ## FairMOT
++ We use 
 
 ## Experiment
 
+
 ## Result
+### CSI Demo Video
+![csi_output](https://user-images.githubusercontent.com/49142825/120190195-3a3bbe00-c253-11eb-98af-b8d17e16d04c.gif)
 
 ## Appendix
 
