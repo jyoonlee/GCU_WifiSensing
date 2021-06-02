@@ -1,6 +1,10 @@
 # GCU_WifiSensing
 
+This page explains how the libraries are used in this project.
 
+![struct](https://user-images.githubusercontent.com/57625667/120338235-01711700-c32f-11eb-92d5-12514e8b48e2.png)
+
+In our project, Fair MOT and Linux 802.11n CSI tool library were used. Each library was used when recognizing and tracking objects from the video data received from the initial camera and when collecting and quantifying Wi-Fi CSI data from the AP.
 
 
 ## CSI
