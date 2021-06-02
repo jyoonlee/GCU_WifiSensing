@@ -114,7 +114,7 @@
 2. Object Detection Result.txt
 
 + Progress
-1. Syncronize csi label and 
+1. synchronize csi label and Result.txt
 2. Use Randomforest
 
 
