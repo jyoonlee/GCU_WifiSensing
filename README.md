@@ -133,7 +133,6 @@ In our project, Fair MOT and Linux 802.11n CSI tool library were used. Each libr
 ### Experiment
 <img src="https://user-images.githubusercontent.com/49142825/120305804-27d18b00-c30c-11eb-845b-fb719730e0cf.png"  width="640" height="400">
 
-## Appendix
 
 
 
