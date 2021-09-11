@@ -1,10 +1,11 @@
 # GCU_WifiSensing
 
-Project name: GCU WiFiSensing
-Date: 2020.07 ~ 2021.06
-Team members: 이재윤(Jaeyoon Lee), 정은서(Eunseo Jeong), 여찬영(Chanyeong Yeo)
+<div>
+        <b>Project name: GCU WiFiSensing (2020.07 ~ 2021.06)</b><br>
+        <b>Team members: 이재윤(Jaeyoon Lee), 정은서(Eunseo Jeong), 여찬영(Chanyeong Yeo)</b>
+</div><br>
 
-This page explains how the libraries are used in this project.
+<h3>System architecture</h3>
 
 ![struct](https://user-images.githubusercontent.com/57625667/120338235-01711700-c32f-11eb-92d5-12514e8b48e2.png)
 
